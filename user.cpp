@@ -24,19 +24,11 @@ void adduser(Table_user user, std::vector<Table_user>& user_db){
   user_db.push_back(user);
 }
 
-//return the index of vector when given postcode
-int search_contact(const std::vector<Table_gp>& gp, std::string postcode){
-  for (int i=0; i < gp.size(); i++){
-    if (gp[i].postcode == postcode){
-      return i;
-    }
-  }
-  return -1;
-}
 
 std::string point_to_s(Table_user user){
     return "(" + user.name + std::to_string(user.phone_no) + ", " + std::to_string(user.nhs_no) + ")";
 }
+
 
 int main(){
     
